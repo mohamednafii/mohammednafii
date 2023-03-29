@@ -1,0 +1,74 @@
+.skills{
+    overflow: hidden;
+}
+.skills-box{
+    background:skyblue;
+    padding: 5rem 6rem;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 1024px;
+}
+.box-desc{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    column-gap: 2rem;
+}
+.skills-wrap{
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    margin-top: 2rem;
+    justify-content: space-between;
+}
+.skill{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.sk-progress{
+    width: 150px;
+    height: 150px;
+    position: relative;
+    
+}
+.sk-progress svg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    
+}
+.sk-progress svg circle {
+    fill: rgb(16, 136, 184);
+    stroke-width: 5px;
+    stroke: blue;
+    stroke-dasharray:427;
+    stroke-dashoffset:426;
+    stroke-linecap: round;
+}
+.counter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    z-index: 1;
+    color: black;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+.counter span{
+    font-size: 2.45rem;
+}
+.sk-title{
+    margin-top:0.75rem;
+    font-weight:400;
+    font-size:1rem;   
+}
+@keyframes progress{
+    to {
+        stroke-dashoffset: var(--target);
+    }
+}
